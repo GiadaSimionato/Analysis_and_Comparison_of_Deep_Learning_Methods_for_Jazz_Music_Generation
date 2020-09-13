@@ -108,3 +108,11 @@ def dataset_preprocessing(songs, vocab, seq_length):
     x = x.reshape(x.shape[0], x.shape[1], 1)
     
     return  x, y
+
+
+def remove_1hot(arr):
+  indeces = []
+  for i in range(len(arr)):
+    index = np.where(arr[i] == 1)[0][0]
+    indeces.append(index)
+  return np.asarray(indeces)

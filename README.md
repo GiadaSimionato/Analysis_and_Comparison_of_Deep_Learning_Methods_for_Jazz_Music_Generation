@@ -27,13 +27,18 @@ Run the `scripts/WaveNet_Notebook.ipynb` notebook.
 
 ### Simplyfied_WaveNet
 
-Run the `scripts/Simplified_WaveNet_Notebook.ipynb` notebook.
+Run the `scripts/SimplifiedWaveNet_Notebook.ipynb` notebook.
  
  ### LSTMNet
  
 Run the `scripts/LSTMNet_Notebook.ipynb` notebook.
 
 ### GRUNet
+
+1. Clone the repository in https://github.com/haryoa/note_music_generator.git
+2. Move the `MusicGeneratorPianoColab.ipynb` in the same directory of your dataset
+3. Customize the notebook changing filespath with correct values.
+4. Run the notebook
 
 ### Attention_RNN
 

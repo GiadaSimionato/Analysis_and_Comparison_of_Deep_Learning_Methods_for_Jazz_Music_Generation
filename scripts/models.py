@@ -1,5 +1,6 @@
 from keras.layers import Activation, Add, Conv1D, Dense, Flatten, Input, Multiply, BatchNormalization, LSTM, Dropout
-from keras.models import Model
+from keras.models import Model, Sequential
+from keras.metrics import mean_squared_error
 from keras import regularizers
 import math
 
@@ -64,3 +65,20 @@ def lstmNet(input_size, hidden_units, dropout_rate, dense_units, output_size, op
     model.compile(optimizer=optimizer, loss=loss, metrics=["accuracy"])
 
     return model
+
+
+def last_time_step_mse(y_true, y_pred):
+  return mean_squared_error(y_true[:, -1], y_pred[:,-1])
+
+
+def simplifiedWaveNN(seq_len, vocab_size):
+
+  model = Sequential()
+  model.add(Input(batch_shape=(None, seq_len, 1)))
+  for rate in (1,2,4,8) *2:
+    model.add(Conv1D(filters=20, kernel_size=2, padding="causal", activation="relu", dilation_rate=rate))
+  model.add(Conv1D(filters=10, kernel_size=1))
+  model.add(Flatten())
+  model.add(Dense(vocab_size, activation="softmax"))
+  model.compile(loss="mse", optimizer="adam", metrics=[last_time_step_mse])
+  return model
