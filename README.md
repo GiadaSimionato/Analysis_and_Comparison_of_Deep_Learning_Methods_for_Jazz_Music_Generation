@@ -25,7 +25,7 @@ This repository contains notebooks about the implementation of the WaveNet, Simp
 
 Run the `scripts/WaveNet_Notebook.ipynb` notebook.
 
-### Simplyfied_WaveNet
+### Simplified_WaveNet
 
 Run the `scripts/SimplifiedWaveNet_Notebook.ipynb` notebook.
  
@@ -35,16 +35,16 @@ Run the `scripts/LSTMNet_Notebook.ipynb` notebook.
 
 ### GRUNet
 
-1. Clone the repository in https://github.com/haryoa/note_music_generator.git
-2. Move the `MusicGeneratorPianoColab.ipynb` in the same directory of your dataset
-3. Customize the notebook changing filespath with correct values.
+1. Clone the repository in https://github.com/haryoa/note_music_generator.git.
+2. Move the `MusicGeneratorPianoColab.ipynb` in the same directory of your dataset.
+3. Customize the notebook changing filepaths with correct values.
 4. Run the notebook
 
 ### Attention_RNN
 
-1. Clone the repository in https://github.com/magenta/magenta.git
-2. Move the `Attention_RNN_Notebook.ipynb` in the same directory
-3. Run the notebook
+1. Clone the repository in https://github.com/magenta/magenta.git.
+2. Move the `Attention_RNN_Notebook.ipynb` in the same directory.
+3. Run the notebook.
 
 ## References
 - A. Van Den Oord, S. Dieleman, H. Zen, K. Simonyan, O. Vinyals, A. Graves, N. Kalchbrenner, A. Senior, K. Kavukcuoglu. *WaveNet: A Generative Model for Raw Audio.* Proc. 9th ISCA Speech Synthesis Workshop, 2016, pp. 125-125.
